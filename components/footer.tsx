@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
 import { Phone, Mail, MapPin, ArrowUp, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useScrollTo } from "@/hooks/use-scroll-to"
@@ -34,10 +35,16 @@ const contactInfo = {
 
 export function Footer() {
   const { scrollTo, scrollToTop } = useScrollTo()
+const pathname = usePathname()
+const router = useRouter()
 
   const handleLinkClick = (href: string) => {
     if (href.startsWith("#")) {
-      scrollTo(href.slice(1))
+      if (pathname === "/") {
+        scrollTo(href.slice(1))
+      } else {
+        router.push(`/${href}`)
+      }
     }
   }
 
@@ -54,7 +61,13 @@ export function Footer() {
             needs and provide honest recommendations.
           </p>
           <Button
-            onClick={() => scrollTo("estimate")}
+            onClick={() => {
+        if (pathname === "/") {
+          scrollTo("estimate")
+        } else {
+          router.push("/#estimate")
+        }
+      }}
             size="lg"
             className="mt-6 bg-primary hover:bg-primary/90 text-primary-foreground"
           >

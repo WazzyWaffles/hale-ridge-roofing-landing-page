@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -19,6 +20,8 @@ export function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
   const { scrollTo } = useScrollTo()
+  const pathname = usePathname()
+  const router = useRouter()
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +34,13 @@ export function Header() {
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false)
     if (href.startsWith("#")) {
-      scrollTo(href.slice(1))
+      if (pathname === "/") {
+        scrollTo(href.slice(1))
+      } else {
+        router.push(`/${href}`)
+      }
+    } else {
+      router.push(href)
     }
   }
 
