@@ -4,74 +4,92 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  /* Hale Ridge Roofing - Forest Green Theme */
+  --background: #F8F5F0;
+  --foreground: #1A1A1A;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+  --primary: #2D5016;
+  --primary-foreground: #FFFFFF;
+  --secondary: #E8F0E0;
+  --secondary-foreground: #2D5016;
+  --muted: #F0EDE8;
+  --muted-foreground: #666666;
+  --accent: #2D5016;
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E0D9D0;
+  --input: #E0D9D0;
+  --ring: #2D5016;
+  --chart-1: #2D5016;
+  --chart-2: #4A7C23;
+  --chart-3: #6B9B3A;
+  --chart-4: #8CB850;
+  --chart-5: #AED667;
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Glass effect tokens */
+  --glass-blur: 10px;
+  --glass-opacity: 0.7;
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  
+  /* Sidebar tokens */
+  --sidebar: #F8F5F0;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #2D5016;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #E8F0E0;
+  --sidebar-accent-foreground: #2D5016;
+  --sidebar-border: #E0D9D0;
+  --sidebar-ring: #2D5016;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  /* Dark mode - Forest Green Theme */
+  --background: #1A1A1A;
+  --foreground: #F8F5F0;
+  --card: #262626;
+  --card-foreground: #F8F5F0;
+  --popover: #262626;
+  --popover-foreground: #F8F5F0;
+  --primary: #4A7C23;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2D3D24;
+  --secondary-foreground: #8CB850;
+  --muted: #333333;
+  --muted-foreground: #A3A3A3;
+  --accent: #4A7C23;
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #404040;
+  --input: #404040;
+  --ring: #4A7C23;
+  --chart-1: #4A7C23;
+  --chart-2: #6B9B3A;
+  --chart-3: #8CB850;
+  --chart-4: #AED667;
+  --chart-5: #D0F080;
+  
+  /* Glass effect tokens - dark mode */
+  --glass-blur: 10px;
+  --glass-opacity: 0.3;
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(38, 38, 38, 0.7);
+  
+  /* Sidebar tokens */
+  --sidebar: #262626;
+  --sidebar-foreground: #F8F5F0;
+  --sidebar-primary: #4A7C23;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #2D3D24;
+  --sidebar-accent-foreground: #8CB850;
+  --sidebar-border: #404040;
+  --sidebar-ring: #4A7C23;
 }
 
 @theme inline {
@@ -119,7 +137,35 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Glass Card Effect Utility */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.dark .glass-card {
+  background: rgba(38, 38, 38, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Section spacing */
+.section-padding {
+  @apply px-4 py-16 md:px-8 md:py-24 lg:px-16 lg:py-32;
+}
+
+/* Container with max-width */
+.container-main {
+  @apply mx-auto w-full max-w-7xl px-4 md:px-8;
 }
